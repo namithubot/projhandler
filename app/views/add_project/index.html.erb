@@ -1,0 +1,38 @@
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<%= javascript_include_tag 'application' %>
+<%= csrf_meta_tag %>
+</head>
+<body id='bodyInd'>
+<%= button_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
+<div class='table_proj'>
+<table>
+ <tr>
+   <th>ID</th>
+   <th>Admin</th>
+   <th>Title</th>
+   <th>isGroup</th>
+   <th>Group Name</th>
+   <th>Deadline</th>
+   <th>Link</th>
+   <th>Information</th>
+   <th colspan="2"></th>
+ </tr>
+ <% @add_proj.each do |proj| %>
+ <tr>
+  <td><%= proj.id %></td>
+  <td><%= proj.admin %></td>
+  <td><%= proj.title %></td>
+  <td><%= proj.group %></td>
+  <td><%= proj.group_name %></td>
+  <td><%= proj.deadline %></td>
+  <td><%= proj.link %></td>
+  <td><%= proj.info %></td>
+  <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
+  <td><%= button_to '', edit_add_project_path(proj), :method => :get, :class=> "btn_edit" %></td>
+  <td><%= button_to '', add_project_path(proj), method: :delete, data: { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
+ </tr>
+ <% end %>
+ </table>
+</div>
+<body>

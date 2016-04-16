@@ -1,0 +1,38 @@
+<%= link_to 'Home', controller: 'add_project' %> 
+<%= form_for :add_project, url: add_project_path(@add_project), method: patch do |f| %>
+ <% if @add_project.errors.any? %>
+	<div id="error_generated">
+	 <%= pluralize(@add_project.errors.count, "error") %> occured:
+	<ul>
+		<% @add_project.errors.full_messages.each do |m| %>
+		 <li><%= m %> </li>
+		<% end %>
+ 	</ul>
+	</div>
+ <% end %>
+ <p>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+ </p>
+ <p>
+   <%= f.label :group %>
+   <%= f.check_box :group %> <br>
+   <%= f.label :group_name %>
+   <%= f.text_field :group_name %><br>
+   <%= f.label :deadline %>
+   <%= f.date_select :deadline %><br>
+   <%= f.label :sharing_source_code %>
+   <%= f.text_area :link %><br>
+   <%= f.label :information %>
+   <%= f.text_area :info %>
+</p>
+<p>
+   <%= f.label :password_authentication %>
+   
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+<%= link_to 'Cancel', controller: 'add_project' %>
+

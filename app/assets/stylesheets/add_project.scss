@@ -1,0 +1,182 @@
+// Place all the styles related to the addProject controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn {
+  background: #34ccdb;
+  background-image: -webkit-linear-gradient(top, #34ccdb, #29a5b9);
+  background-image: -moz-linear-gradient(top, #34ccdb, #29a5b9);
+  background-image: -ms-linear-gradient(top, #34ccdb, #29a5b9);
+  background-image: -o-linear-gradient(top, #34ccdb, #29a5b9);
+  background-image: linear-gradient(to bottom, #34ccdb, #29a5b9);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.table_proj {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #f4ebeb;
+	
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+	
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+	
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;
+	border-top-right-radius:4px;
+	
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-left-radius:4px;
+	border-top-left-radius:4px;
+}.table_proj table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.table_proj tr:last-child td:last-child {
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+}
+.table_proj table tr:first-child td:first-child {
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-left-radius:4px;
+	border-top-left-radius:4px;
+}
+.table_proj table tr:first-child td:last-child {
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;
+	border-top-right-radius:4px;
+}.table_proj tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+}.table_proj tr:hover td{
+	background-color:#5bdfa2;
+        font-size:20px;
+
+}
+.table_proj td{
+	vertical-align:middle;
+	
+	background-color:#80f7ba;
+
+	border:1px solid #f4ebeb;
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:7px;
+	font-size:15px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#664242;
+}
+.table_proj tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.table_proj tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.table_proj tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.table_proj tr:first-child td{
+		background:-o-linear-gradient(bottom, #aaffd4 5%, #66e2a2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aaffd4), color-stop(1, #66e2a2) );
+	background:-moz-linear-gradient( center top, #aaffd4 5%, #66e2a2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaffd4", endColorstr="#66e2a2");	background: -o-linear-gradient(top,#aaffd4,66e2a2);
+
+	background-color:#aaffd4;
+	border:0px solid #f4ebeb;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#1e1b1b;
+}
+.table_proj tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #aaffd4 5%, #66e2a2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aaffd4), color-stop(1, #66e2a2) );
+	background:-moz-linear-gradient( center top, #aaffd4 5%, #66e2a2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaffd4", endColorstr="#66e2a2");	background: -o-linear-gradient(top,#aaffd4,66e2a2);
+
+	background-color:#aaffd4;
+}
+.table_proj tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.table_proj tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+#bodyInd{
+ background: #e9ffe9;
+ max-with: 100%;
+ height: 100px;
+}
+
+/*destroy buuton*/
+.btn_dest {
+    background-image: url(buttons/erase.png); 
+    background-color: transparent; 
+    background-repeat: no-repeat;  
+    background-position: 0px 0px;  
+    border: none;           
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 24px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+.btn_dest:hover{
+	background-image: url(buttons/delete.png);
+	height: 27px;
+}
+
+//edit button
+.btn_edit{
+    background-image: url(buttons/edit_2.png); 
+    background-color: transparent;
+    background-repeat: no-repeat;  
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        
+    height: 24px;           /* make this the size of your image */
+    padding-left: 16px;     
+    vertical-align: middle; /* align the text vertically centered */
+}
+.btn_edit:hover{
+   background-image: url(buttons/edit.png);
+}
+
+.btn_show{
+    background-image: url(buttons/view-details.png); 
+    background-color: transparent;
+    background-repeat: no-repeat;  
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        
+    height: 24px;           /* make this the size of your image */
+    padding-left: 16px;     
+    vertical-align: middle; /* align the text vertically centered */
+}
+.btn_show:hover{
+   background-image: url(buttons/info-icon.png);
+}
+
