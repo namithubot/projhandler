@@ -1,0 +1,14 @@
+<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<%= button_to 'Create', new_my_group_path, :method => :get, :class => "btn" %>
+<%= button_to 'Join', new_member_path, :method => :get, :class => "btn" %>
+<ol>
+<h1> Your Groups </h1>
+<% @mygroup.each do |mygrp| %>
+		<h3><li><%= link_to mygrp.groupname, my_group_path(mygrp), :method => :get %></li></h3>
+<% end %>
+<hr>
+<h1> Group gifted by your participation </h1>
+<% @group.each do |grp| %>
+		<h3><li><%= link_to grp.groupname, my_group_path(grp), :method => :get %></li></h3>
+<% end %>
+</ol>

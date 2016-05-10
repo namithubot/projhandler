@@ -5,33 +5,50 @@
 </head>
 <body id='bodyInd'>
 <%= button_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
+<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<%= button_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
+<%= button_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
 <div class='table_proj'>
 <table>
  <tr>
    <th>ID</th>
    <th>Admin</th>
    <th>Title</th>
-   <th>isGroup</th>
    <th>Group Name</th>
    <th>Deadline</th>
    <th>Link</th>
    <th>Information</th>
+   <th>Status</th>
    <th colspan="2"></th>
  </tr>
  <% @add_proj.each do |proj| %>
+ 	<% if proj.admin == @admin_1 %>
  <tr>
   <td><%= proj.id %></td>
   <td><%= proj.admin %></td>
   <td><%= proj.title %></td>
-  <td><%= proj.group %></td>
   <td><%= proj.group_name %></td>
   <td><%= proj.deadline %></td>
   <td><%= proj.link %></td>
   <td><%= proj.info %></td>
+  <% case proj.status
+	when 0
+		 @status_proj = 'To be started'
+	when 1
+		 @status_proj = 'Completed'
+	when 2
+		 @status_proj = 'In transit'
+	when 3
+		 @status_proj = 'Abandoned'
+	else
+		 @status_proj = 'Failed'
+		end %>
+	<td> <%= @status_proj %>
   <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
   <td><%= button_to '', edit_add_project_path(proj), :method => :get, :class=> "btn_edit" %></td>
-  <td><%= button_to '', add_project_path(proj), method: :delete, data: { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
+  <td><%= button_to '', add_project_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
  </tr>
+	<% end %>
  <% end %>
  </table>
 </div>

@@ -1,0 +1,12 @@
+<% if flash[:danger] %>
+	<div class="alert alert-danger">
+		<%= flash[:danger] %>	
+	</div>
+<% end %>
+<%= form_for :user , url: forgot_password_path(@user), method: :patch do |f| %>
+<p>
+ <%= f.label :password %>
+   <%= f.password_field :password %>
+ 
+  <%= f.submit %>
+<% end %>

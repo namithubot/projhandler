@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'awesome_print'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -12,8 +13,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
+gem 'therubyracer', platforms: :ruby
+gem 'composite_primary_keys'
+gem 'bcrypt'
 # Use jquery as the JavaScript library
 group :assets do
  gem 'jquery-rails'
@@ -25,10 +27,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#gem 'therubyracer'
+gem 'pg'
+gem 'auto_strip_attributes'
 #gem 'materialize-sass'
 #gem 'bootstrap-sass', '~>3.3.6'
 #gem 'sass-rails', '>=3.2'
-
+gem 'rspec-rails' 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

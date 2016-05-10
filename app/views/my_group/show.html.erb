@@ -1,0 +1,48 @@
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<%= javascript_include_tag 'application' %>
+<%= csrf_meta_tag %>
+</head>
+<body id='bodyInd'>
+<%= button_to 'Home', add_project_index_path, :method => :get, :class => "btn" %>
+<%= button_to 'Members', member_path(:id => @group[:id]), :method => :get, :class => "btn" %>
+<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<% if @group.admin == @the_user %>
+<%= button_to 'Dissolve', my_group_path(@group), :method => :delete, :class => "btn" %>
+<% end %>
+<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<div class='table_proj'>
+<table>
+ <tr>
+   <th>ID</th>
+   <th>Admin</th>
+   <th>Title</th>
+   <th>isGroup</th>
+   <th>Group Name</th>
+   <th>Deadline</th>
+   <th>Link</th>
+   <th>Information</th>
+   <th colspan="2"></th>
+ </tr>
+ <% @projects.each do |proj| %>
+ 	<% if proj.group_name == @group.groupname %>
+ <tr>
+  <td><%= proj.id %></td>
+  <td><%= proj.admin %></td>
+  <td><%= proj.title %></td>
+  <td><%= proj.status %></td>
+  <td><%= proj.group_name %></td>
+  <td><%= proj.deadline %></td>
+  <td><%= proj.link %></td>
+  <td><%= proj.info %></td>
+  <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
+	<% if proj.admin == @the_user %>
+  <td><%= button_to '', edit_add_project_path(proj), :method => :get, :class=> "btn_edit" %></td>
+  <td><%= button_to '', add_project_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
+ </tr>
+	<% end %>
+	<% end %>
+ <% end %>
+ </table>
+</div>
+</body>

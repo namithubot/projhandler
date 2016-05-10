@@ -1,14 +1,17 @@
 class AddProjectController < ApplicationController
  def index
   @add_proj = AddProject.all
+  @admin_1 = working_user[:username]
+  @status_proj
  end
  def new
   @add_project = AddProject.new
  end
 
  def edit
-  confirm "Are you sure?"
+ #confirm "Are you sure?"
   @add_project = AddProject.find(params[:id])
+  
  end
  
  def show
@@ -17,6 +20,8 @@ class AddProjectController < ApplicationController
 
  def create
   @add_project = AddProject.new(add_project_param)
+	admin_1 = working_user
+	@add_project[:admin] = admin_1[:username]
 	if @add_project.save
   		redirect_to @add_project
 	else
@@ -43,7 +48,7 @@ class AddProjectController < ApplicationController
 
 private
  def add_project_param
-  params.require(:add_project).permit(:title, :admin, :group, :group_name, :deadline, :link, :info)
+  params.require(:add_project).permit(:title, :admin, :status, :group_name, :deadline, :link, :info)
  end
  
 

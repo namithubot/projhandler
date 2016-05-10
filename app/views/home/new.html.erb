@@ -1,1 +1,32 @@
-<h2>Home</h2>
+<%= form_for :user, url: signup_path do |f| %>
+<% if @user.errors.any? %>
+	<div id="error_generated">
+	 <%= pluralize(@user.errors.count, "error") %> occured:
+	<ul>
+		<% @user.errors.full_messages.each do |m| %>
+		 <li><%= m %> </li>
+		<% end %>
+ 	</ul>
+	</div><p>
+<% end %>
+
+<p>
+ <%= f.label :username %>
+   <%= f.text_field :username %>
+</p>
+<p>
+ <%= f.label :password %>
+   <%= f.password_field :password %>
+ <%= f.label :password %>
+ <%= f.password_field :password__confirmation %>
+</p>
+<p>
+ <%= f.label :email %>
+   <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
+<%= link_to 'Cancel', controller: 'sign_in', action: 'new' %>

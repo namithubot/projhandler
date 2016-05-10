@@ -1,0 +1,25 @@
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<%= javascript_include_tag 'application' %>
+<%= csrf_meta_tag %>
+</head>
+<body id='bodyInd'>
+<%= button_to 'Home', add_project_index_path, :method => :get, :class => "btn" %>
+<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<div class='table_proj'>
+ <ul>
+ <% @waiting.each do |proj| %>
+  <li><%= proj.user_name %>
+  <%= button_to '', member_path(proj), :method => :get, :class => "btn_show" %>
+  <% if @isAdmin == true %>
+	<% if !proj.verified_by_user %>
+  <%= link_to 'Confirm', edit_member_path(proj), :method => :get %>
+	<% end %>
+  <%= button_to '', member_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %>
+   <% end %>
+  
+	</li>
+ <% end %>
+ </ul>
+</div>
+</body>

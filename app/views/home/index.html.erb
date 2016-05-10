@@ -1,0 +1,13 @@
+<%= form_for :user, url: home_index_path do |f| %>
+ <p>
+ <%= f.label :username %>
+   <%= f.text_field :user %>
+</p>
+<p>
+ <%= f.label :password %>
+   <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

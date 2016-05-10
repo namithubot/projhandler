@@ -1,0 +1,21 @@
+<% if flash[:danger] %>
+	<div class="alert alert-danger">
+		<%= flash[:danger] %>	
+	</div>
+<% end %>
+<%= form_for :sign_in_user do |f| %>
+ <p>
+ <%= f.label :user %>
+   <%= f.text_field :username %>
+</p>
+<p>
+ <%= f.label :password %>
+   <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+Don't have an account? :(<br>
+Don't be sad!<br>
+<%= link_to 'Sign up', controller: 'home', action: 'new' %>
+<% end %>

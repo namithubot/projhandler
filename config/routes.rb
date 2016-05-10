@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
   #get 'sign_in/index'
-  resources :home
   resources :add_project
-  root 'sign_in#index'
+  resources :my_group
+  resources :members
+  #get 'my_group/:id' => 'member#edit'
+  get 'login' => 'sign_in#new'
+  post 'login' => 'sign_in#create'
+  delete 'logout' => 'sign_in#destroy'
+  get 'signup' => 'home#new'
+  post 'signup' => 'home#create'
+  get 'forgot_password' => 'sign_in#edit'
+  patch 'forgot_password' => 'sign_in#update'
+  root 'sign_in#new'
+  #post 'my_group/join/:id' => 'my_group#join'
   #get '/add_project/:id', to: 'add_project#destroy'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -15,8 +15,6 @@
    <%= f.text_field :title %>
  </p>
  <p>
-   <%= f.label :group %>
-   <%= f.check_box :group, :class => "is_group" %> <br>
    <%= f.label :group_name %>
    <%= f.text_field :group_name %><br>
    <%= f.label :deadline %>
@@ -25,14 +23,15 @@
    <%= f.text_area :link %><br>
    <%= f.label :information %>
    <%= f.text_area :info %>
+   <%= f.label :staus %>
+   <%= f.select(:status, [['To be started', 0], ['Completed!', 1], ['Going on!', 2], ['Abandoned', 3], ['Failed', 4]]) %> 
 </p>
 <p>
-   <%= f.label :password_authentication %>
    
 </p>
 <p>
   <%= f.submit %>
 </p>
 <% end %>
+Note: We encourage but not put a compulsion on a group being availabe with us. However, if you start a group with the same name, you projects will be synced.
 <%= link_to 'Cancel', controller: 'add_project' %>
-

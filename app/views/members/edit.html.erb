@@ -1,0 +1,9 @@
+<h3>Add him/her? Are you sure? </h3>
+<%= form_for :group, url: member_path(@group), method: :patch do |f| %>
+	<%= f.label :user %>
+   <%= f.text_field :user_name, :readonly => true %><br>
+ <p>
+	 <%= f.submit %>
+ </p>
+<% end %>
+<%= link_to 'Cancel', controller: 'add_project' %>

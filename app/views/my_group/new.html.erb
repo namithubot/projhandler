@@ -1,0 +1,22 @@
+<%= form_for :group, url: my_group_index_path do |f| %>
+<% if @group.errors.any? %>
+	<div id="error_generated">
+	 <%= pluralize(@group.errors.count, "error") %> occured:
+	<ul>
+		<% @group.errors.full_messages.each do |m| %>
+		 <li><%= m %> </li>
+		<% end %>
+ 	</ul>
+	</div><p>
+<% end %>
+
+<p>
+ <%= f.label :group_name %>
+   <%= f.text_field :groupname %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
+<%= link_to 'Cancel', controller: 'add_project', action: 'index' %>
