@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'signup' => 'home#create'
   get 'forgot_password' => 'sign_in#edit'
   patch 'forgot_password' => 'sign_in#update'
+  get 'access' => 'home#edit'
+  post 'access' => 'home#update'
   root 'sign_in#new'
   #post 'my_group/join/:id' => 'my_group#join'
   #get '/add_project/:id', to: 'add_project#destroy'
