@@ -32526,3 +32526,590 @@ Started GET "/" for ::1 at 2016-05-10 21:32:01 +0530
 Processing by SignInController#new as HTML
   Rendered sign_in/new.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:35:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  Rendered add_project/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 2.6ms)
+
+SyntaxError (/home/shubham/db_proj/projhandler/projhandler/app/views/add_project/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/shubham/db_proj/projhandler/projhandler/app/views/add_project/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/add_project/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/add_project/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.7ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.7ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:35:36 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (261.7ms)
+Completed 200 OK in 293ms (Views: 289.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/buttons/info-icon.png" for ::1 at 2016-05-11 11:35:39 +0530
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:35:40 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (39.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `proj' for #<#<Class:0x00000003e9eb18>:0x00000003504bc0>
+Did you mean?  proc):
+    1: <p>
+    2:  <ul>
+    3: 	<li>Title: <%= @add_proj.title %></li>
+    4:  	<% if proj.admin != @admin_1 %>
+    5:   		<li> By :<%= proj.admin %></li>
+    6: 	<% end %>
+    7:   <li>Group: <%= @add_proj.group_name %></li>
+  app/views/add_project/show.html.erb:4:in `_app_views_add_project_show_html_erb___2651478347911500958_27769560'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:36:34 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (40.7ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `proj' for #<#<Class:0x00000003e9eb18>:0x00000003d72370>
+Did you mean?  proc):
+    1: <p>
+    2:  <ul>
+    3: 	<li>Title: <%= @add_proj.title %></li>
+    4:  	<% if proj.admin != @admin_1 %>
+    5:   		<li> By :<%= proj.admin %></li>
+    6: 	<% end %>
+    7:   <li>Group: <%= @add_proj.group_name %></li>
+  app/views/add_project/show.html.erb:4:in `_app_views_add_project_show_html_erb___2651478347911500958_32127800'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.6ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:36:50 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (39.2ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `proj' for #<#<Class:0x00000003e9eb18>:0x007fb43cbad4f0>
+Did you mean?  proc):
+    1: <p>
+    2:  <ul>
+    3: 	<li>Title: <%= @add_proj.title %></li>
+    4:  	<% if proj.admin != @admin_1 %>
+    5:   		<li> By :<%= proj.admin %></li>
+    6: 	<% end %>
+    7:   <li>Group: <%= @add_proj.group_name %></li>
+  app/views/add_project/show.html.erb:4:in `_app_views_add_project_show_html_erb___2651478347911500958_70206044856400'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.8ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.5ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:36:57 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (44.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `proj' for #<#<Class:0x00000003e9eb18>:0x007fb43c4332b0>
+Did you mean?  proc):
+    1: <p>
+    2:  <ul>
+    3: 	<li>Title: <%= @add_proj.title %></li>
+    4:  	<% if proj.admin != @admin_1 %>
+    5:   		<li> By :<%= proj.admin %></li>
+    6: 	<% end %>
+    7:   <li>Group: <%= @add_proj.group_name %></li>
+  app/views/add_project/show.html.erb:4:in `_app_views_add_project_show_html_erb___2651478347911500958_70206044856400'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.3ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:37:11 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mAddProject Load (0.3ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (28.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `proj' for #<#<Class:0x00000003e9eb18>:0x007fb43ebf25d0>
+Did you mean?  proc):
+    2:  <ul>
+    3: 	<li>Title: <%= @add_proj.title %></li>
+    4:  	<% if @add_proj.admin != @admin_1 %>
+    5:   		<li> By :<%= proj.admin %></li>
+    6: 	<% end %>
+    7:   <li>Group: <%= @add_proj.group_name %></li>
+    8:   <li>Deadline: <%= @add_proj.deadline %></li>
+  app/views/add_project/show.html.erb:5:in `_app_views_add_project_show_html_erb___2651478347911500958_70206061775100'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:37:39 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered add_project/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:38:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 232ms (Views: 177.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/buttons/edit.png" for ::1 at 2016-05-11 11:38:58 +0530
+
+
+Started GET "/add_project/50/edit" for ::1 at 2016-05-11 11:38:58 +0530
+Processing by AddProjectController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered add_project/edit.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:39:01 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:39:11 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:39:31 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  [1m[35mAddProject Load (2.8ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:42:05 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/add_project/No" for ::1 at 2016-05-11 11:42:08 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"No"}
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find AddProject with 'id'=No):
+  app/controllers/add_project_controller.rb:18:in `show'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/add_project/new" for ::1 at 2016-05-11 11:42:47 +0530
+Processing by AddProjectController#new as HTML
+  Rendered add_project/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_project" for ::1 at 2016-05-11 11:43:16 +0530
+Processing by AddProjectController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ciTlgRJxiBDIsb9eqdjebm0bQt/MM6BnD8fZiQmax4KgR807488HGWaMl2idbNpk7iY2Do7CB0vWiEkOnCC4ZA==", "add_project"=>{"title"=>"another test project", "group_name"=>"some group", "deadline(1i)"=>"2016", "deadline(2i)"=>"5", "deadline(3i)"=>"11", "link"=>"http://github.com/something", "info"=>"someinfo", "status"=>"0"}, "commit"=>"Save Add project"}
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMyGroup Exists (59.4ms)[0m  SELECT  1 AS one FROM "my_groups" WHERE "my_groups"."groupname" = $1 LIMIT 1  [["groupname", "some group"]]
+  [1m[36mSQL (48.6ms)[0m  [1mINSERT INTO "add_projects" ("title", "status", "group_name", "link", "info", "deadline", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "another test project"], ["status", 0], ["group_name", "some group"], ["link", "http://github.com/something"], ["info", "someinfo"], ["deadline", "2016-05-11"], ["admin", "user1"], ["created_at", "2016-05-11 06:13:17.182209"], ["updated_at", "2016-05-11 06:13:17.182209"]]
+  [1m[35m (54.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/add_project/68
+Completed 302 Found in 359ms (ActiveRecord: 189.7ms)
+
+
+Started GET "/add_project/68" for ::1 at 2016-05-11 11:43:17 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mAddProject Load (0.3ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 68]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/buttons/delete.png" for ::1 at 2016-05-11 11:45:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/add_project/68/edit" for ::1 at 2016-05-11 11:45:03 +0530
+Processing by AddProjectController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 68]]
+  Rendered add_project/edit.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 92ms (Views: 48.8ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/add_project/68" for ::1 at 2016-05-11 11:45:09 +0530
+Processing by AddProjectController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgl3pnV9mRoup2zVKCHriyXEHNH+kou+BkQoFGcPQOT8al8chMMWE4CaROMcle+BpvloALxjLJLfC7iT8rU/Ag==", "add_project"=>{"title"=>"another test project", "group_name"=>"some group", "deadline(1i)"=>"2016", "deadline(2i)"=>"5", "deadline(3i)"=>"11", "link"=>"github.com/something", "info"=>"someinfo", "status"=>"0"}, "commit"=>"Save Add project", "id"=>"68"}
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 68]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMyGroup Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "my_groups" WHERE "my_groups"."groupname" = $1 LIMIT 1[0m  [["groupname", "some group"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "add_projects" SET "link" = $1, "updated_at" = $2 WHERE "add_projects"."id" = $3  [["link", "github.com/something"], ["updated_at", "2016-05-11 06:15:09.391693"], ["id", 68]]
+  [1m[36m (14.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/add_project/68
+Completed 302 Found in 35ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/add_project/68" for ::1 at 2016-05-11 11:45:09 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 68]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 11.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/add_project/github.com/something" for ::1 at 2016-05-11 11:45:11 +0530
+
+ActionController::RoutingError (No route matches [GET] "/add_project/github.com/something"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.9ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started GET "/add_project/68/edit" for ::1 at 2016-05-11 11:45:44 +0530
+Processing by AddProjectController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 68]]
+  Rendered add_project/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/add_project/68" for ::1 at 2016-05-11 11:45:54 +0530
+Processing by AddProjectController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ekFWkcBwuE5VAjqt71TJ7G5JEH/Rw0yWjf6UEHpmGV+oIn4rMc43R/s/Epvb4M3m7XRkrpMy67pUsQSX79xmuQ==", "add_project"=>{"title"=>"another test project", "group_name"=>"some group", "deadline(1i)"=>"2016", "deadline(2i)"=>"5", "deadline(3i)"=>"11", "link"=>"http://github.com/something", "info"=>"someinfo", "status"=>"0"}, "commit"=>"Save Add project", "id"=>"68"}
+  [1m[36mAddProject Load (0.3ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 68]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMyGroup Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "my_groups" WHERE "my_groups"."groupname" = $1 LIMIT 1[0m  [["groupname", "some group"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "add_projects" SET "link" = $1, "updated_at" = $2 WHERE "add_projects"."id" = $3  [["link", "http://github.com/something"], ["updated_at", "2016-05-11 06:15:54.319258"], ["id", 68]]
+  [1m[36m (46.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/add_project/68
+Completed 302 Found in 54ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/add_project/68" for ::1 at 2016-05-11 11:45:54 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mAddProject Load (0.2ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 68]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:51:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.8ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (160.7ms)
+Completed 200 OK in 217ms (Views: 186.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/explore" for ::1 at 2016-05-11 11:51:05 +0530
+Processing by AddProjectController#explore as HTML
+  Rendered add_project/explore.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21:    <th>Status</th>
+    22:    <th colspan="2"></th>
+    23:  </tr>
+    24:  <% @add_proj.each do |proj| %>
+    25:  <tr>
+    26:   <td><%= proj.id %></td>
+    27:   <td><%= proj.admin %></td>
+  app/views/add_project/explore.html.erb:24:in `_app_views_add_project_explore_html_erb__385346278202211895_70221156079060'
+
+
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.1ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.1ms)
+
+
+Started GET "/explore" for ::1 at 2016-05-11 11:51:33 +0530
+Processing by AddProjectController#explore as HTML
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/explore.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/explore" for ::1 at 2016-05-11 11:53:14 +0530
+Processing by AddProjectController#explore as HTML
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/explore.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project/62" for ::1 at 2016-05-11 11:53:18 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 62]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 30.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:20 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project/50" for ::1 at 2016-05-11 11:53:23 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 50]]
+  [1m[36mUserDetail Load (1.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:26 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.6ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/add_project/62" for ::1 at 2016-05-11 11:53:28 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 62]]
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:30 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project/63" for ::1 at 2016-05-11 11:53:33 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 63]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:35 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/add_project/65" for ::1 at 2016-05-11 11:53:38 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 65]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:40 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/explore" for ::1 at 2016-05-11 11:53:42 +0530
+Processing by AddProjectController#explore as HTML
+  [1m[35mAddProject Load (3.5ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/explore.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/add_project/67" for ::1 at 2016-05-11 11:53:45 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 67]]
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "user1"]]
+  Rendered add_project/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project" for ::1 at 2016-05-11 11:53:48 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.5ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "user1"]]
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 1.1ms)

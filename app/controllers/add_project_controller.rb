@@ -7,6 +7,10 @@ class AddProjectController < ApplicationController
  def new
   @add_project = AddProject.new
  end
+  
+ def explore
+   @add_proj = AddProject.all
+ end
 
  def edit
  #confirm "Are you sure?"
@@ -16,6 +20,7 @@ class AddProjectController < ApplicationController
  
  def show
   @add_proj = AddProject.find(params[:id])
+  @admin_1 = working_user[:username]
  end
 
  def create

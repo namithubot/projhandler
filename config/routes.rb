@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   patch 'forgot_password' => 'sign_in#update'
   get 'access' => 'home#edit'
   post 'access' => 'home#update'
+  get 'explore' => 'add_project#explore'
   root 'sign_in#new'
   #post 'my_group/join/:id' => 'my_group#join'
   #get '/add_project/:id', to: 'add_project#destroy'

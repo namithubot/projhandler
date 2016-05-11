@@ -1,14 +1,36 @@
 <p>
- <table>
-    <tr>
-	<th>Title</th>
-	<th>Admin</th>
-    </tr>
- <tr>
-    <td> <%= @add_proj.title %> </td>
-     <td> <%= @add_proj.admin %> </td>
+ <ul>
+	<li>Title: <%= @add_proj.title %></li>
+ 	<% if @add_proj.admin != @admin_1 %>
+  		<li> By :<%= @add_proj.admin %></li>
+	<% end %>
+	<% if @add_proj.group_name != nil %>
+  <li>Group: <%= @add_proj.group_name %></li>
+	<% end %>
+  <li>Deadline: <%= @add_proj.deadline %></li>
+	<% if @add_proj.link != nil %>
+  <li><%= link_to 'Source', @add_proj.link %></li>
+	<% end %>
+  <li>About: <%= @add_proj.info %></li>
+  <% case @add_proj.status
+	when 0
+		 @status_proj = 'To be started'
+	when 1
+		 @status_proj = 'Completed'
+	when 2
+		 @status_proj = 'In transit'
+	when 3
+		 @status_proj = 'Abandoned'
+	else
+		 @status_proj = 'Failed'
+		end %>
+	<li>Status: <%= @status_proj %></li>
+ </ul>
+	<% if @add_proj.admin == @admin_1 %>
+		<td><%= button_to '', edit_add_project_path(@add_proj), :method => :get, :class=> "btn_edit" %></td>
+  <td><%= button_to '', add_project_path(@add_proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
  </tr>
-</table>
+	<% end %>
 </p>
 <%= link_to 'Back', add_project_index_path %>
    

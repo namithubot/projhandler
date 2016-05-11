@@ -8,7 +8,6 @@
 <%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
 <%= button_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
 <%= button_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
-<%= button_to 'Explore', explore_path, :method => :get, :class => "btn" %>
 <div class='table_proj'>
 <table>
  <tr>
@@ -17,12 +16,11 @@
    <th colspan="1"></th>
  </tr>
  <% @add_proj.each do |proj| %>
- 	<% if proj.admin == @admin_1 %>
  <tr>
   <td><%= proj.id %></td>
   <td><%= proj.title %></td>
   <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
-	<% end %>
+ </tr>
  <% end %>
  </table>
 </div>
