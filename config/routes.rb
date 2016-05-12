@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #get 'sign_in/index'
   resources :add_project
   resources :my_group
-  resources :members
+  resources :members #only: [:new, :create, :update, :show, :index, :destroy]
   #get 'my_group/:id' => 'member#edit'
   get 'login' => 'sign_in#new'
   post 'login' => 'sign_in#create'
@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   get 'access' => 'home#edit'
   post 'access' => 'home#update'
   get 'explore' => 'add_project#explore'
-  root 'sign_in#new'
+  #get 'members' => 'members#show'
+  #get 'edit_members' => 'members#edit'
+  #patch 'members' => 'members#update'
+  #delete 'members' => 'members#destroy'
+ root 'sign_in#new'
   #post 'my_group/join/:id' => 'my_group#join'
   #get '/add_project/:id', to: 'add_project#destroy'
   # The priority is based upon order of creation: first created -> highest priority.

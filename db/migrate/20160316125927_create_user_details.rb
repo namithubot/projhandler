@@ -5,7 +5,7 @@ class CreateUserDetails < ActiveRecord::Migration
       t.string :password
       t.string :email
 
-      t.primary_key :user	
+      #t.primary_key :user	
       t.timestamps null: false
     end
   end

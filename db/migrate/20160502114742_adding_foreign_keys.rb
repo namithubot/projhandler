@@ -1,7 +1,7 @@
 class AddingForeignKeys < ActiveRecord::Migration
   def up
 	execute 'ALTER TABLE add_projects
-  ADD CONSTRAINT admin_fkey FOREIGN KEY (admin)
+ ADD CONSTRAINT admin_fkey FOREIGN KEY (admin)
       REFERENCES user_details (username) MATCH SIMPLE
       ON UPDATE CASCADE ON DELETE CASCADE;'
 	

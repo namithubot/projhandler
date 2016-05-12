@@ -1,3 +1,4 @@
+
 <% if flash[:danger] %>
 	<div class="alert alert-danger">
 		<%= flash[:danger] %>	
@@ -10,3 +11,4 @@
  
   <%= f.submit %>
 <% end %>
+<%= link_to 'Cancel', controller: 'add_project', action: 'index' %>

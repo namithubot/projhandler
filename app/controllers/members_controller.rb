@@ -4,8 +4,8 @@ def new
 end
 
 def create
-	group_searched = params[:groupname]
-	@found = MyGroup.find_by(group: group_searched[:groupname])
+	group_searched = params[:group]
+	@found = MyGroup.find_by(groupname: group_searched[:groupname])
 	if @found != nil
 		@group = Group.new(group_param)
 		admin_1 = working_user
@@ -24,12 +24,13 @@ def create
 end
 
 def edit
- @group = Group.find(params[:id])
+ @group = Group.find_by(:id => params[:id])
+ #ap @group
 end
 
 def show
 	@isAdmin = false
-	group = MyGroup.find(params[:id])
+	group = MyGroup.find_by(:id => params[:id])
 	if working_user[:username] == group[:admin]
 		@isAdmin = true
 	end
@@ -37,20 +38,20 @@ def show
 end
 
 def update
-  @group = Group.find(params[:id])
-  @group.verified_by_user = true
-	#ap @group
-  if @group.update(group_param)
+  @group = Group.where(:id => params[:id])
+   ap @group
+  #@group.verified_by_user = true
+	
+  if @group.update_all(:verified_by_user => true)
    	redirect_to add_project_index_path
   else
-   render 'edit'
+	render 'edit'
   end
 end
-
 def destroy
-  @add_project = Group.find(params[:id])
-  @add_project.destroy
-
+  @member = Group.where(:id => params[:id])
+  #ap @member
+  @member.delete_all
   redirect_to member_path 
 end
 

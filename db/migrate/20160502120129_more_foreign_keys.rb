@@ -18,7 +18,7 @@ UNIQUE (groupname);'
       REFERENCES user_details (username) MATCH SIMPLE
       ON UPDATE CASCADE ON DELETE CASCADE;'
 
-      execute 'ALTER TABLE my_groups
+    execute 'ALTER TABLE my_groups
   ADD CONSTRAINT my_group_admin_fkey FOREIGN KEY (admin)
       REFERENCES user_details (username) MATCH SIMPLE
       ON UPDATE CASCADE ON DELETE CASCADE;'

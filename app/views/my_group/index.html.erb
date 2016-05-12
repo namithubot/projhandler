@@ -1,3 +1,4 @@
+<%= button_to 'Home', add_project_index_path, :method => :get, :class => "btn" %>
 <%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
 <%= button_to 'Create', new_my_group_path, :method => :get, :class => "btn" %>
 <%= button_to 'Join', new_member_path, :method => :get, :class => "btn" %>
@@ -9,6 +10,8 @@
 <hr>
 <h1> Group gifted by your participation </h1>
 <% @group.each do |grp| %>
+			<% grp = MyGroup.find_by(:groupname => grp.groupname) %>
 		<h3><li><%= link_to grp.groupname, my_group_path(grp), :method => :get %></li></h3>
 <% end %>
 </ol>
+

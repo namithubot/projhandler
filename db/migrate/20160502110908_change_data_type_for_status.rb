@@ -11,6 +11,6 @@ USING
   end
 
   def change
-   execute 'ALTER TABLE add_projects DROP COLUMN true'
+   #execute 'ALTER TABLE add_projects DROP COLUMN true'
   end
 end
