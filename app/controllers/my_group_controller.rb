@@ -9,6 +9,7 @@ def show
 	@projects = AddProject.all
 	@group = MyGroup.find_by(id: params[:id])
 	@the_user = working_user[:username]
+	@groupn = MyGroup.new
 end
 
 def new

@@ -1,4 +1,11 @@
-<%= link_to 'Home', controller: 'add_project' %> 
+<div class="ui teal inverted menu">
+<%= link_to 'Home', add_project_index_path, :class => "item" %>
+    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+    <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
+    <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
+    <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
+    <%= link_to 'Explore', explore_path, :method => :get, :class => "item" %>
+</div>
 <%= form_for :add_project, url: add_project_path(@add_project), method: :patch do |f| %>
  <% if @add_project.errors.any? %>
 	<div id="error_generated">
@@ -11,27 +18,79 @@
 	</div>
  <% end %>
  <p>
-   <%= f.label :title %>
-   <%= f.text_field :title %>
- </p>
- <p>
-   <%= f.label :group_name %>
-   <%= f.text_field :group_name %><br>
-   <%= f.label :deadline %>
-   <%= f.date_select :deadline %><br>
-   <%= f.label :sharing_source_code %>
-   <%= f.text_area :link %><br>
-   <%= f.label :information %>
-   <%= f.text_area :info %>
-   <%= f.label :staus %>
-   <%= f.select(:status, [['To be started', 0], ['Completed!', 1], ['Going on!', 2], ['Abandoned', 3], ['Failed', 4]]) %> 
-</p>
-<p>
-   <%= f.label :password_authentication %>
-   
-</p>
-<p>
-  <%= f.submit %>
+<div class="ui teal compact segment" style="margin: auto; width: 50%;">
+<div class="ui two row grid center aligned">
+  <div class="two column row">
+    <div class="column">
+      <div class="ui input">
+      <p>
+      <%= f.text_field :title, placeholder: 'title' %>
+      </p>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="two column row">
+    <div class="column">
+      <div class="ui input">
+      <p>
+      <%= f.text_field :group_name, placeholder: 'group name' %>
+      </p>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="two column row">
+    <div class="column">
+      <div class="ui input">
+      <p>
+      <%= f.label :deadline %>
+      <%= f.date_select :deadline %>
+      </p>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="two column row">
+    <div class="column">
+      <div class="ui labeled input">
+      <p>
+        <div class="ui label">
+        http://
+        </div>
+      <%= f.url_field :link, placeholder: 'link' %>
+      </p>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="two column row">
+    <div class="column">
+      <div class="ui input">
+      <p>
+      <%= f.text_area :info,  placeholder: 'information' %>
+      </p>
+      </div>
+    </div>
+  </div>
+  </br/>
+  <div class="two column row">
+    <div class="column">
+      <div class="ui input">
+      <p>
+      <%= f.select(:status, [['To be started', 0], ['Completed!', 1], ['Going on!', 2], ['Abandoned', 3], ['Failed', 4]]) %>
+      </p>
+      </div>
+    </div>
+  </div>
+  </br/>
+  <div class="one column row">
+    <div class="column">
+      <p>
+      <%= f.submit %>
+      </p>
+</div>
+</div>
 </p>
 <% end %>
 <%= link_to 'Cancel', controller: 'add_project' %>

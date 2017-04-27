@@ -1,4 +1,12 @@
-<%= link_to 'Home', controller: 'add_project' %> 
+<br/>
+<div class="ui teal inverted menu">
+<%= link_to 'Home', add_project_index_path, :class => "item" %> 
+    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+    <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
+    <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
+    <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
+    <%= link_to 'Explore', explore_path, :method => :get, :class => "item" %>
+</div>
 <%= form_for :add_project, url: add_project_index_path do |f| %>
  <% if @add_project.errors.any? %>
 	<div id="error_generated">
@@ -10,13 +18,12 @@
  	</ul>
 	</div>
  <% end %>
-<div class="ui compact segment" style="margin: auto; width: 80%;">
+<div class="ui teal compact segment" style="margin: auto; width: 50%;">
 <div class="ui two row grid center aligned">
   <div class="two column row">
     <div class="column">
       <div class="ui input">
       <p>
-      <%= f.label :title %>
       <%= f.text_field :title, placeholder: 'title' %>
       </p>
       </div>
@@ -27,7 +34,6 @@
     <div class="column">
       <div class="ui input">
       <p>
-      <%= f.label :group_name %>
       <%= f.text_field :group_name, placeholder: 'group name' %>
       </p>
       </div>
@@ -47,12 +53,12 @@
   <br/>
   <div class="two column row">
     <div class="column">
-      <div class="ui input">
+      <div class="ui labeled input">
       <p>
-      <%= f.label :sharing_source_code %>
-      <i class="info circle icon link" data-content="Keep this blank if not sharing the source code. Add the complete link including the protocol" data-variation="small">
-      </i>
-      <%= f.text_area :link, placeholder: 'link' %>
+	<div class="ui label">
+	http://
+	</div>
+      <%= f.url_field :link, placeholder: 'link' %>
       </p>
       </div>
     </div>
@@ -62,7 +68,6 @@
     <div class="column">
       <div class="ui input">
       <p>
-      <%= f.label :information %>
       <%= f.text_area :info,  placeholder: 'information' %>
       </p>
       </div>
@@ -73,7 +78,6 @@
     <div class="column">
       <div class="ui input">
       <p>
-      <%= f.label :staus %>
       <%= f.select(:status, [['To be started', 0], ['Completed!', 1], ['Going on!', 2], ['Abandoned', 3], ['Failed', 4]]) %>   
       </p>
       </div>

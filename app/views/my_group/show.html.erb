@@ -2,47 +2,76 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
 <%= javascript_include_tag 'application' %>
 <%= csrf_meta_tag %>
+<style>
+        form { display: inline-block; }
+</style>
 </head>
 <body id='bodyInd'>
-<%= button_to 'Home', add_project_index_path, :method => :get, :class => "btn" %>
-<%= button_to 'Members', member_path(:id => @group[:id]), :method => :get, :class => "btn" %>
-<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+<br/>
+<div class="ui teal inverted menu">
+
+<%= link_to 'Home', add_project_index_path, :method => :get, :class => "item" %>
+<%= link_to 'Members', member_path(:id => @group[:id]), :method => :get, :class => "item" %>
+<%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
 <% if @group.admin == @the_user %>
-<%= button_to 'Dissolve', my_group_path(@group), :method => :delete, :class => "btn" %>
+<%= link_to 'Dissolve', my_group_path(@group), :method => :delete, :class => "item" %>
 <% end %>
-<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
-<div class='table_proj'>
-<table>
- <tr>
+<%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
+</div>
+<table class='ui celled structured table'>
+ <thead>
+   <tr>
    <th>ID</th>
    <th>Admin</th>
    <th>Title</th>
-   <th>isGroup</th>
+   <th>Status</th>
    <th>Group Name</th>
    <th>Deadline</th>
    <th>Link</th>
    <th>Information</th>
-   <th colspan="2"></th>
+   <th >Actions</th>
  </tr>
+ </thead>
  <% @projects.each do |proj| %>
  	<% if proj.group_name == @group.groupname %>
  <tr>
   <td><%= proj.id %></td>
   <td><%= proj.admin %></td>
   <td><%= proj.title %></td>
-  <td><%= proj.status %></td>
+  <td>
+   <% case proj.status
+        when 0
+                 @status_proj = 'To be started'
+        when 1
+                 @status_proj = 'Completed'
+        when 2
+                 @status_proj = 'In transit'
+        when 3
+                 @status_proj = 'Abandoned'
+        else
+                 @status_proj = 'Failed'
+                end %>
+        <%= @status_proj %>
+
+  </td>
   <td><%= proj.group_name %></td>
   <td><%= proj.deadline %></td>
   <td><%= proj.link %></td>
   <td><%= proj.info %></td>
-  <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
-	<% if proj.admin == @the_user %>
-  <td><%= button_to '', edit_add_project_path(proj), :method => :get, :class=> "btn_edit" %></td>
-  <td><%= button_to '', add_project_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %></td>
- </tr>
+  <td><%= button_to  add_project_path(proj), :method => :get, :class => "ui button" do %>
+	<i class="info icon"></i>
 	<% end %>
+	<% if proj.admin == @the_user %>
+  <%= button_to  edit_add_project_path(proj), :method => :get, :class=> "ui button" do %>
+	<i class="edit icon"></i>
+	<% end %>
+  <%= button_to  add_project_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "ui button" do %>
+	<i class="remove icon"></i>
+	<% end %>
+	</td>
+	<% end %>
+   </tr>
 	<% end %>
  <% end %>
  </table>
-</div>
 </body>

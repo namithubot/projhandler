@@ -3,7 +3,7 @@
 		<%= flash[:danger] %>	
 	</div>
 <% end %>
-<%= form_for :group, url: members_path do |f| %>
+<%= form_for :my_group, url: members_path do |f| %>
 <% if @group && @group.errors.any? %>
 	<div id="error_generated">
 	 <%= pluralize(@group.errors.count, "error") %> occured:

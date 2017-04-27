@@ -4,10 +4,10 @@ def new
 end
 
 def create
-	group_searched = params[:group]
-	@found = MyGroup.find_by(groupname: group_searched[:groupname])
+	group_searched = params[:my_group]
+	@found = MyGroup.find_by(groupname: group_searched[:group])
 	if @found != nil
-		@group = Group.new(group_param)
+		@group = Group.new(group_param1)
 		admin_1 = working_user
 		@group[:user_name] = admin_1[:username]
 		@group[:verified_by_user]=false
@@ -34,7 +34,7 @@ def show
 	if working_user[:username] == group[:admin]
 		@isAdmin = true
 	end
-	@waiting = Group.where(:groupname => group[:groupname])
+	@waiting = Group.where(:group => group[:groupname])
 end
 
 def update
@@ -58,6 +58,10 @@ end
 private
 def group_param
   params.require(:group).permit(:user_name, :groupname)
+end
+
+def group_param1
+ params.require(:my_group).permit(:group)
 end
 
 end

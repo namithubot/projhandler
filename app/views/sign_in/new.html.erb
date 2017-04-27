@@ -1,13 +1,15 @@
-<% if flash[:danger] %>
-	<div class="alert alert-danger">
-		<%= flash[:danger] %>	
-	</div>
-<% end %>
 <div class="ui center aligned grid" style="margin: auto; width: 50%; margin-top:5%;">
 <div class="column">
 <div class="row" style="height: 20px;">
-  <div class="ui teal top large attached label"><h2 style="color: white">Log-in to your account</h2></div>
+  <div class="ui teal large attached label"><h2 style="color: white">Log-in to your account</h2></div>
 </div>
+<% if flash[:danger] %>
+	<div class="ui attached warning message">
+	  <i class="close icon"></i>
+	  <h3>Error!</h3>
+	<%= flash[:danger] %>	
+	</div>
+<% end %>
 </div>
 </div>
 <div class="ui compact segment" style="margin: auto; width: 50%;">
@@ -16,8 +18,7 @@
 <div class="column">
 	<div class="ui input">
          <%= form_for :sign_in_user do |f| %>
-	  <b> <%= f.label :user %></b><span>   </span>
-	  <%= f.text_field :username, placeholder: 'username' %>
+	  <%= f.text_field :username, placeholder: 'Username' %>
 	</div>
    </div>
   </div>
@@ -25,8 +26,7 @@
     <div class="column">
 	<div class="ui input">
 	<p>
-	<b><%= f.label :password %></b>
-	<%= f.password_field :password, placeholder: 'password' %>
+	<%= f.password_field :password, placeholder: 'Password' %>
 	</p>
 	</div>
     </div>

@@ -4,21 +4,14 @@
 <%= csrf_meta_tag %>
 </head>
 <body id='bodyInd'>
-<div class="ui four item menu">
-<a class="item">
-<%= button_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
-</a>
-<a class="item">
-<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
-</a>
-<a class="item">
-<%= button_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
-</a>
-<a class="item">
-<%= button_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
-</a>
+<br/>
+<div class="ui teal inverted menu">
+<%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+<%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
+<%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
+<%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
 </div>
-<table class="ui celled structured table">
+<table class="ui teal celled structured table">
 <thead>
  <tr>
    <th>ID</th>
@@ -30,7 +23,9 @@
  <tr>
   <td><%= proj.id %></td>
   <td><%= proj.title %></td>
-  <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
+  <td><%= button_to add_project_path(proj), :method => :get, :class => "ui button" do%>
+	 <i class="info icon"></i><% end %>
+  </td>
  </tr>
  <% end %>
 </div>

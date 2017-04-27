@@ -3,23 +3,33 @@
 <%= javascript_include_tag 'application' %>
 <%= csrf_meta_tag %>
 </head>
-<body id='bodyInd'>
-<%= button_to 'Home', add_project_index_path, :method => :get, :class => "btn" %>
-<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
-<div class='table_proj'>
- <ul>
+<body>
+<div class="ui teal inverted menu">
+<%= link_to 'Home', add_project_index_path, :class => "item" %>
+    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+    <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
+    <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
+    <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
+    <%= link_to 'Explore', explore_path, :method => :get, :class => "item" %>
+</div>
+<div class="ui segment center">
+<div class='ui cards'>
  <% @waiting.each do |proj| %>
-  <li><%= proj.user_name %>
-  <%= button_to '', member_path(proj), :method => :get, :class => "btn_show" %>
+  <div class="card">
+ <div class="content"> 
+  <div class="header"><%= link_to proj.user_name, member_path(proj), :method => :get %></div>
+	Wants to join this group.
   <% if @isAdmin == true %>
+	<div class="extra content">
+	<div class="ui two buttons">
 	<% if !proj.verified_by_user %>
-  <%= link_to 'Confirm', edit_member_path(proj), :method => :get %>
+  <%= button_to 'Confirm', edit_member_path(proj), :confirm => 'Are you sure', :method => :get, :class => "ui basic green button" %>
 	<% end %>
-  <%= button_to '', member_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn_dest" %>
-   <% end %>
+  <%= button_to 'Decline', member_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "ui basic red button" %>
+	</div></div> 
+  <% end %>
   
-	</li>
  <% end %>
- </ul>
+</div>
 </div>
 </body>

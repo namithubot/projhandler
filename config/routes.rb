@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'login' => 'sign_in#new'
   post 'login' => 'sign_in#create'
   delete 'logout' => 'sign_in#destroy'
+  get 'logout' => 'sign_in#destroy'
   get 'signup' => 'home#new'
   post 'signup' => 'home#create'
   get 'forgot_password' => 'sign_in#edit'
