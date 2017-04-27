@@ -4,17 +4,28 @@
 <%= csrf_meta_tag %>
 </head>
 <body id='bodyInd'>
+<div class="ui four item menu">
+<a class="item">
 <%= button_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
+</a>
+<a class="item">
 <%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+</a>
+<a class="item">
 <%= button_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
+</a>
+<a class="item">
 <%= button_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
-<div class='table_proj'>
-<table>
+</a>
+</div>
+<table class="ui celled structured table">
+<thead>
  <tr>
    <th>ID</th>
    <th>Title</th>
-   <th colspan="1"></th>
+   <th colspan="1">Info</th>
  </tr>
+</thead>
  <% @add_proj.each do |proj| %>
  <tr>
   <td><%= proj.id %></td>
@@ -22,6 +33,5 @@
   <td><%= button_to '', add_project_path(proj), :method => :get, :class => "btn_show" %></td>
  </tr>
  <% end %>
- </table>
 </div>
-<body>
+</body>

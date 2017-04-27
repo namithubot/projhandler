@@ -4,18 +4,31 @@
 <%= csrf_meta_tag %>
 </head>
 <body id='bodyInd'>
-<%= button_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
-<%= button_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
-<%= button_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
-<%= button_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
-<%= button_to 'Explore', explore_path, :method => :get, :class => "btn" %>
-<div class='table_proj'>
-<table>
- <tr>
-   <th>ID</th>
-   <th>Title</th>
-   <th colspan="1"></th>
- </tr>
+<div class="ui menu">
+  <div class="item">
+    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "btn" %>
+  </div>    
+  <div class="item">
+    <%= link_to 'Logout', logout_path, :method => :delete, :class => "btn" %>
+  </div>  
+  <div class="item">
+    <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "btn" %>
+  </div>  
+  <div class="item">
+    <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "btn" %>
+  </div>  
+  <div class="item">
+    <%= link_to 'Explore', explore_path, :method => :get, :class => "btn" %>
+  </div>  
+</div>
+<table class="ui celled structured table">
+  <thead>
+    <tr>
+      <th rowspan="1">ID</th>
+      <th rowspan="1">Title</th>
+      <th colspan="1">Info</th>
+   </tr>
+  </thead>
  <% @add_proj.each do |proj| %>
  	<% if proj.admin == @admin_1 %>
  <tr>

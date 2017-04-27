@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512022042) do
+ActiveRecord::Schema.define(version: 20160502113319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160512022042) do
     t.string   "title"
     t.string   "group_name"
     t.date     "deadline"
+    t.boolean  "public"
     t.text     "link"
     t.text     "info"
     t.datetime "created_at", null: false
@@ -28,33 +29,27 @@ ActiveRecord::Schema.define(version: 20160512022042) do
     t.string   "status"
   end
 
-  create_table "groups", id: false, force: :cascade do |t|
-    t.string   "user_name",                                                                 null: false
-    t.string   "groupname",                                                                 null: false
-    t.datetime "created_at",                                                                null: false
-    t.datetime "updated_at",                                                                null: false
+  create_table "groups", force: :cascade do |t|
+    t.string   "user"
+    t.string   "group"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.boolean  "verified_by_user"
-    t.integer  "id",               limit: 8, default: "nextval('groups_id_seq'::regclass)", null: false
   end
 
   create_table "my_groups", force: :cascade do |t|
-    t.string   "groupname"
+    t.string   "group"
     t.string   "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "my_groups", ["groupname"], name: "unique_group_name", unique: true, using: :btree
-
-  create_table "user_details", primary_key: "username", force: :cascade do |t|
+  create_table "user_details", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.string   "username"
   end
 
-  add_foreign_key "add_projects", "user_details", column: "admin", primary_key: "username", name: "add_projects_admin_fkey"
-  add_foreign_key "groups", "my_groups", column: "groupname", primary_key: "groupname", name: "group_to_my_group_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "groups", "user_details", column: "user_name", primary_key: "username", name: "group_user_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "my_groups", "user_details", column: "admin", primary_key: "username", name: "my_group_admin_fkey", on_update: :cascade, on_delete: :cascade
 end

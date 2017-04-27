@@ -1,0 +1,63 @@
+<% if flash[:danger] %>
+	<div class="alert alert-danger">
+		<%= flash[:danger] %>	
+	</div>
+<% end %>
+<div class="ui center aligned grid" style="margin: auto; width: 50%; margin-top:5%;">
+<div class="column">
+<div class="row" style="height: 20px;">
+  <div class="ui blue top large attached label"><h2 style="color: whitek">Log-in to your account</h2></div>
+</div>
+</div>
+</div>
+<div class="ui compact segment" style="margin: auto; width: 50%;">
+<div class="ui column grid center aligned">
+<div class="two column row">
+<div class="column">
+	<div class="ui input">
+         <%= form_for :sign_in_user do |f| %>
+	  <b> <%= f.label :user %></b>
+	  <%= f.text_field :username, placeholder: 'username' %>
+	</div>
+   </div>
+  </div>
+  <div class="two column row">
+    <div class="column">
+	<div class="ui input">
+	<p>
+	<b><%= f.label :password %></b>
+	<%= f.password_field :password, placeholder: 'password' %>
+	</p>
+	</div>
+    </div>
+  </div>
+  <div class="one column row">
+    <div class="column">
+	<p>
+ 	<%= f.submit "Sign In",{class: "circular ui black submit button", style: "color: white"} %>
+	</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ui horizontal divider">
+<h2>OR</h2>
+</div>
+<div class="ui center aligned grid" style="margin: auto; width: 50%;">
+<div class="column">
+<div class="row" style="height: 20px;">
+  <div class="ui blue top large attached label"><h2 style="color: white">Join us</h2></div>
+</div>
+</div>
+</div>
+<div class="ui center aligned compact segment" style="margin: auto; width: 50%;">
+<p>
+Don't have an account? :(<br>
+Don't be sad!<br>
+<div class= "circular ui black submit button" >
+<%= link_to 'Sign up', {controller: 'home', action: 'new'},{style: "color: white"} %>
+</div>
+</p>
+</div>
+</div>
+<% end %>
