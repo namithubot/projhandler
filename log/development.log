@@ -52437,3 +52437,29 @@ Processing by AddProjectController#index as HTML
   [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
   Rendered add_project/index.html.erb within layouts/application (6.4ms)
 Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/add_project/68" for 127.0.0.1 at 2017-04-28 04:33:13 +0530
+Processing by AddProjectController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UmyrHUBR5KnlmQujacbwuA3+bk50co60cDdoyGD2gC90MTktinza9QUv+TFbNV3zyXzLZaKD0PKUg0pQHiV4qw==", "id"=>"68"}
+  [1m[35mAddProject Load (0.7ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 68]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "add_projects" WHERE "add_projects"."id" = $1  [["id", 68]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/add_project
+Completed 302 Found in 157ms (ActiveRecord: 103.5ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 04:33:13 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/explore" for 127.0.0.1 at 2017-04-28 04:33:26 +0530
+Processing by AddProjectController#explore as HTML
+  [1m[35mAddProject Load (0.5ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/explore.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.5ms)
