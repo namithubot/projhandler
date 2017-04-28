@@ -52642,3 +52642,542 @@ Completed 200 OK in 110ms (Views: 67.0ms | ActiveRecord: 40.6ms)
 
 
 Started GET "/assets/semantic-ui/icons-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2" for 127.0.0.1 at 2017-04-28 18:35:30 +0530
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 20:13:05 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (302.7ms)
+Completed 200 OK in 411ms (Views: 362.6ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-04-28 20:59:35 +0530
+Processing by SignInController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-28 20:59:35 +0530
+Processing by SignInController#new as HTML
+  Rendered sign_in/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 245ms (Views: 244.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-04-28 20:59:49 +0530
+Processing by HomeController#new as HTML
+  Rendered home/new.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 163ms (Views: 139.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-28 21:02:19 +0530
+Processing by SignInController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7/D2ROVA9FCP04AgpioMwfaqW3aDR7bagYPSCQzg9EAxoJQIFm1Q/aSi/XUSHTpBjlXufemqyNFUO1V3A4YJxA==", "sign_in_user"=>{"username"=>"kisna", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+Redirected to http://localhost:3000/add_project
+Completed 302 Found in 82ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:02:19 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/add_project/101" for 127.0.0.1 at 2017-04-28 21:02:43 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 101]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  Rendered add_project/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/add_project/101/edit" for 127.0.0.1 at 2017-04-28 21:03:07 +0530
+Processing by AddProjectController#edit as HTML
+  Parameters: {"id"=>"101"}
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1  [["id", 101]]
+  Rendered add_project/edit.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-04-28 21:03:33 +0530
+Processing by AddProjectController#new as HTML
+  Rendered add_project/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:03:48 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (1.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/add_project/101" for 127.0.0.1 at 2017-04-28 21:03:51 +0530
+Processing by AddProjectController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mAddProject Load (0.6ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 101]]
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  Rendered add_project/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:03:55 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.6ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/add_project/101/edit" for 127.0.0.1 at 2017-04-28 21:03:57 +0530
+Processing by AddProjectController#edit as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mAddProject Load (0.2ms)[0m  [1mSELECT  "add_projects".* FROM "add_projects" WHERE "add_projects"."id" = $1 LIMIT 1[0m  [["id", 101]]
+  Rendered add_project/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:04:15 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/explore" for 127.0.0.1 at 2017-04-28 21:04:22 +0530
+Processing by AddProjectController#explore as HTML
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/explore.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:04:37 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:04:41 +0530
+Processing by MyGroupController#index as HTML
+  [1m[36mUserDetail Load (0.7ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mMyGroup Load (44.6ms)[0m  SELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1  [["admin", "kisna"]]
+  [1m[36mGroup Load (40.7ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2[0m  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 230ms (Views: 69.9ms | ActiveRecord: 112.4ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:04:43 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.6ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/forgot_password" for 127.0.0.1 at 2017-04-28 21:04:45 +0530
+Processing by SignInController#edit as HTML
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  Rendered sign_in/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:04:47 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.5ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:05:33 +0530
+Processing by MyGroupController#index as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mMyGroup Load (0.3ms)[0m  SELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1  [["admin", "kisna"]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2[0m  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_group/35" for 127.0.0.1 at 2017-04-28 21:06:02 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[35mMyGroup Load (0.5ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered my_group/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/members/35" for 127.0.0.1 at 2017-04-28 21:06:04 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mMyGroup Load (1.0ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."group" = $1[0m  [["group", "Group 2"]]
+  Rendered members/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-04-28 21:06:10 +0530
+Processing by SignInController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-28 21:06:10 +0530
+Processing by SignInController#new as HTML
+  Rendered sign_in/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-28 21:06:18 +0530
+Processing by SignInController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YbmSHNAIIARsxXUrRNoSvwZEWFo0OmCFAvozCiVg8Pm/6fBQIyWEqUe0CH7w7SQ/frvtUV7XHo7XQrR0KgYNfQ==", "sign_in_user"=>{"username"=>"test3", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "test3"]]
+Redirected to http://localhost:3000/add_project
+Completed 302 Found in 72ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:06:18 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test3"]]
+  [1m[35mAddProject Load (0.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:06:21 +0530
+Processing by MyGroupController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test3"]]
+  [1m[35mMyGroup Load (0.2ms)[0m  SELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1  [["admin", "test3"]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2[0m  [["user_name", "test3"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/members/new" for 127.0.0.1 at 2017-04-28 21:06:23 +0530
+Processing by MembersController#new as HTML
+  Rendered members/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 23.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/members" for 127.0.0.1 at 2017-04-28 21:06:45 +0530
+Processing by MembersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uu94Xdbu14hFVDGyy8vq0s6RyHwdev6zYY9eUeCc6VaMvxoRJcNzJW4lTOd//NxStm59d3eXgLi0N9kv7/oU0g==", "my_group"=>{"group"=>"Some Group"}, "commit"=>"Save My group"}
+  [1m[35mMyGroup Load (0.2ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."groupname" = $1 LIMIT 1  [["groupname", "Some Group"]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test3"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGroup Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "groups" WHERE ("groups"."user_name" = 'test3' AND "groups"."group" = 'Some Group') LIMIT 1[0m
+  [1m[35mSQL (18.7ms)[0m  INSERT INTO "groups" ("group", "user_name", "verified_by_user", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["group", "Some Group"], ["user_name", "test3"], ["verified_by_user", "f"], ["created_at", "2017-04-28 15:36:45.927619"], ["updated_at", "2017-04-28 15:36:45.927619"]]
+  [1m[36m (36.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/my_group
+Completed 302 Found in 142ms (ActiveRecord: 56.7ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:06:46 +0530
+Processing by MyGroupController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "test3"]]
+  [1m[36mMyGroup Load (0.3ms)[0m  [1mSELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1[0m  [["admin", "test3"]]
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2  [["user_name", "test3"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-04-28 21:06:49 +0530
+Processing by SignInController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-28 21:06:49 +0530
+Processing by SignInController#new as HTML
+  Rendered sign_in/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-28 21:06:57 +0530
+Processing by SignInController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtZHVBjHZaHQ47smvC3smkNEwPuLe0r/HZcajgwXfCUYhiUY6+rBDPuSxnMIGtoaO7t18OGWNPTIL53wA3GBoQ==", "sign_in_user"=>{"username"=>"kisna", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+Redirected to http://localhost:3000/add_project
+Completed 302 Found in 72ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:06:57 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.3ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/semantic-ui/icons-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2" for 127.0.0.1 at 2017-04-28 21:06:58 +0530
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:07:00 +0530
+Processing by MyGroupController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mMyGroup Load (0.4ms)[0m  [1mSELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1[0m  [["admin", "kisna"]]
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:07:02 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMyGroup Load (0.7ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.5ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered my_group/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/members/34" for 127.0.0.1 at 2017-04-28 21:07:05 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mMyGroup Load (0.7ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."group" = $1  [["group", "Some Group"]]
+  Rendered members/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/members/2/edit" for 127.0.0.1 at 2017-04-28 21:09:30 +0530
+Processing by MembersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered members/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/members/2" for 127.0.0.1 at 2017-04-28 21:09:45 +0530
+Processing by MembersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYfxvct50o34QxZOVgIyFitBqHBfC9JLuSgZUaEKKvqv15PxOFR2INMyaxviNQSWU74dezXmrEBskJ4vrmzXfg==", "group"=>{"user_name"=>"test3", "group"=>"Some Group"}, "commit"=>"Save Group", "id"=>"2"}
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."id" = $1  [["id", 2]]
+  [1m[36mSQL (29.3ms)[0m  [1mUPDATE "groups" SET "verified_by_user" = 't' WHERE "groups"."id" = $1[0m  [["id", 2]]
+Redirected to http://localhost:3000/add_project
+Completed 302 Found in 46ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:09:45 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.5ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:09:48 +0530
+Processing by MyGroupController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mMyGroup Load (0.3ms)[0m  [1mSELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1[0m  [["admin", "kisna"]]
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:09:54 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMyGroup Load (0.6ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered my_group/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/members/34" for 127.0.0.1 at 2017-04-28 21:09:57 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mMyGroup Load (0.5ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."group" = $1  [["group", "Some Group"]]
+  Rendered members/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/members/2" for 127.0.0.1 at 2017-04-28 21:10:03 +0530
+Processing by MembersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qNZxyKZSSqj24rO3ResUN5URQgW+x21evDLUpuWHrfd2hhOEVX/uBd2TzuLx3CK37e73DtQqE1VpilPY6uFQcw==", "id"=>"2"}
+  [1m[36mSQL (25.6ms)[0m  [1mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 2]]
+Redirected to http://localhost:3000/members/2
+Completed 302 Found in 28ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/members/2" for 127.0.0.1 at 2017-04-28 21:10:03 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMyGroup Load (0.3ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/members_controller.rb:34:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (68.6ms)
+
+
+Started DELETE "/members/2" for 127.0.0.1 at 2017-04-28 21:10:08 +0530
+Processing by MembersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qNZxyKZSSqj24rO3ResUN5URQgW+x21evDLUpuWHrfd2hhOEVX/uBd2TzuLx3CK37e73DtQqE1VpilPY6uFQcw==", "id"=>"2"}
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "groups" WHERE "groups"."id" = $1  [["id", 2]]
+Redirected to http://localhost:3000/members/2
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/members/2" for 127.0.0.1 at 2017-04-28 21:10:08 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMyGroup Load (0.3ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserDetail Load (0.1ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/members_controller.rb:34:in `show'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:23:25 +0530
+Processing by MyGroupController#index as HTML
+  [1m[36mUserDetail Load (0.3ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mMyGroup Load (0.4ms)[0m  SELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1  [["admin", "kisna"]]
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2[0m  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:23:27 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mMyGroup Load (0.6ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered my_group/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:23:34 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMyGroup Load (0.4ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUserDetail Load (0.3ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.3ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered my_group/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:23:38 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mMyGroup Load (0.4ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mUserDetail Load (0.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered my_group/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/members/34" for 127.0.0.1 at 2017-04-28 21:25:46 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMyGroup Load (0.4ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUserDetail Load (0.2ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."group" = $1[0m  [["group", "Some Group"]]
+  Rendered members/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:25:48 +0530
+Processing by AddProjectController#index as HTML
+  [1m[35mUserDetail Load (0.4ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered add_project/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_group" for 127.0.0.1 at 2017-04-28 21:25:53 +0530
+Processing by MyGroupController#index as HTML
+  [1m[35mUserDetail Load (0.8ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mMyGroup Load (0.3ms)[0m  [1mSELECT "my_groups".* FROM "my_groups" WHERE "my_groups"."admin" = $1[0m  [["admin", "kisna"]]
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."user_name" = $1 AND "groups"."verified_by_user" = $2  [["user_name", "kisna"], ["verified_by_user", "t"]]
+  Rendered my_group/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 24.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/my_group/34" for 127.0.0.1 at 2017-04-28 21:25:55 +0530
+Processing by MyGroupController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMyGroup Load (0.7ms)[0m  [1mSELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUserDetail Load (1.0ms)[0m  SELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1  [["username", "kisna"]]
+  [1m[36mAddProject Load (0.4ms)[0m  [1mSELECT "add_projects".* FROM "add_projects"[0m
+  Rendered my_group/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 43ms (Views: 35.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/members/34" for 127.0.0.1 at 2017-04-28 21:25:57 +0530
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mMyGroup Load (0.5ms)[0m  SELECT  "my_groups".* FROM "my_groups" WHERE "my_groups"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mUserDetail Load (0.4ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mGroup Load (0.4ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."group" = $1  [["group", "Some Group"]]
+  Rendered members/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-04-28 21:26:00 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.5ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "kisna"]]
+  [1m[35mAddProject Load (0.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-04-28 22:24:50 +0530
+Processing by SignInController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-28 22:24:50 +0530
+Processing by SignInController#new as HTML
+  Rendered sign_in/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-04-28 22:24:55 +0530
+Processing by HomeController#new as HTML
+  Rendered home/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
