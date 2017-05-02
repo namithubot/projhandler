@@ -13,6 +13,11 @@
 //= require jquery
 
 //require materialize-sprockets
-// require jquery_ujs
+//= require jquery_ujs
 //= require semantic-ui/accordion
+//= require jquery-ui
+//= require jquery.modal
+//= require prototype
+//= require effects
+//= require accordion
 

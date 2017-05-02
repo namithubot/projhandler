@@ -53181,3 +53181,136 @@ Started GET "/signup" for 127.0.0.1 at 2017-04-28 22:24:55 +0530
 Processing by HomeController#new as HTML
   Rendered home/new.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-05-03 03:22:43 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (1.2ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35mAddProject Load (2.2ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (181446.5ms)
+Completed 200 OK in 182650ms (Views: 182418.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-05-03 03:25:46 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.8ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35mAddProject Load (0.7ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (261.4ms)
+Completed 200 OK in 364ms (Views: 359.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-05-03 03:25:47 +0530
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-05-03 03:29:07 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (1.1ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35mAddProject Load (1.4ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (1809.7ms)
+Completed 200 OK in 2276ms (Views: 2109.2ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:17 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 534ms (Views: 506.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:18 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 428ms (Views: 426.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:18 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 339ms (Views: 337.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:18 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 342ms (Views: 341.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:45 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 339ms (Views: 337.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:45 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 348ms (Views: 346.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:45 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 327ms (Views: 325.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:29:46 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 368ms (Views: 366.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:30:26 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 335ms (Views: 333.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:30:26 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 446ms (Views: 444.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:30:27 +0530
+Processing by AddProjectController#new as HTML
+  Parameters: {"authenticity_token"=>"nkABugzDRQEhKVDt0iwRttMrPdAEQVOHrlNvquhAj4bdP4y2OqJB8Vy2Hh0eLjGPckWDHybzfBIBqenfpCZwBQ=="}
+  Rendered add_project/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 327ms (Views: 325.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:30:27 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 400ms (Views: 398.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-05-03 03:31:23 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.9ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35mAddProject Load (0.6ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (289.2ms)
+Completed 200 OK in 412ms (Views: 407.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:32:02 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 405ms (Views: 403.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project/new" for 127.0.0.1 at 2017-05-03 03:32:02 +0530
+Processing by AddProjectController#new as */*
+  Rendered add_project/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 457ms (Views: 455.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2017-05-03 03:32:47 +0530
+Processing by AddProjectController#index as HTML
+  [1m[36mUserDetail Load (0.8ms)[0m  [1mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."username" = $1 LIMIT 1[0m  [["username", "test"]]
+  [1m[35mAddProject Load (3.3ms)[0m  SELECT "add_projects".* FROM "add_projects"
+  Rendered add_project/index.html.erb within layouts/application (321.6ms)
+Completed 200 OK in 443ms (Views: 436.2ms | ActiveRecord: 4.2ms)

@@ -9,7 +9,7 @@
 <body>
 <br/>
 <div class="ui teal inverted menu">
-    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+    <%= link_to 'Add new', new_add_project_path, :rel => "modal:open", :class => "item" %>
     <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
     <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
     <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>

@@ -14,7 +14,7 @@
 <%= link_to 'Members', member_path(:id => @group[:id]), :method => :get, :class => "item" %>
 <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
 <% if @group.admin == @the_user %>
-<%= link_to 'Dissolve', my_group_path(@group), :method => :delete, :class => "item" %>
+<%= button_to 'Dissolve', my_group_path(@group), :method => :delete, :class => "item" %>
 <% end %>
 <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
 </div>
