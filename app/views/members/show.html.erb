@@ -6,7 +6,7 @@
 <body>
 <div class="ui teal inverted menu">
 <%= link_to 'Home', add_project_index_path, :class => "item" %>
-    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
+    <%= link_to 'Add new', new_add_project_path, :rel => "modal:open", :class => "item" %>
     <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
     <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
     <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
@@ -23,7 +23,7 @@
 	<div class="extra content">
 	<div class="ui two buttons">
 	<% if !proj.verified_by_user %>
-  <%= button_to 'Confirm', edit_member_path(proj), :confirm => 'Are you sure', :method => :get, :class => "ui basic green button" %>
+  <%= link_to 'Confirm', edit_member_path(proj),:rel => "modal:open", :class => "ui basic green button" %>
 	<% end %>
   <%= button_to 'Decline', member_path(proj), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => "ui basic red button" %>
 	</div></div> 

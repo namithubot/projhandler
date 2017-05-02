@@ -1,15 +1,6 @@
 <style>
 form { display: inline-block;}
 </style>
-<div class="ui teal inverted menu">
-    <%= link_to 'Home', add_project_index_path, :method => :get, :class => "item" %>
-    <%= link_to 'Add new', new_add_project_path, :method => :get, :class => "item" %>
-    <%= link_to 'Logout', logout_path, :method => :delete, :class => "item" %>
-    <%= link_to 'Groups', my_group_index_path, :method => :get, :class => "item" %>
-    <%= link_to 'Change Password', forgot_password_path, :method => :get, :class => "item" %>
-    <%= link_to 'Explore', explore_path, :method => :get, :class => "item" %>
-</div>
-
 	<div class="ui piled segment">
 	<% if @add_proj.admin == @admin_1 %>
 		<td><%= button_to  edit_add_project_path(@add_proj), :method => :get, :class=> "ui button" do %> <i class="edit icon"></i><% end %>

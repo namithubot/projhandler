@@ -1,3 +1,13 @@
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
+></script>
+<%= javascript_include_tag 'application'=%>
+<%= csrf_meta_tag %>
+<style>
+        form { display: inline-block; }
+</style>
+</head>
+
 <div class="ui center aligned grid" style="margin: auto; width: 50%; margin-top:5%;">
 <div class="column">
 <div class="row" style="height: 20px;">
@@ -55,7 +65,7 @@
 Don't have an account? :(<br>
 Don't be sad!<br>
 <div class= "circular ui black submit button" >
-<%= link_to 'Sign up', {controller: 'home', action: 'new'},{style: "color: white"} %>
+<%= link_to 'Sign up', {controller: 'home', action: 'new'},{style: "color: white"}, :rel => "modal:open" %>
 </div>
 </p>
 </div>

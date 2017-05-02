@@ -4,7 +4,7 @@ class AddProject < ActiveRecord::Base
 	validate :group_exists?
 
 def group_exists?
-	false if (!group_name.nil? && !MyGroup.where(groupname: 
+	false if (!group_name.nil? && !MyGroup.where(group: 
 group_name).exists?)
 	#errors.add(:group_name, 'Group doesn't exists. Try adding it 
 #first!')
